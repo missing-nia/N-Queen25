@@ -1,3 +1,4 @@
+
 // Class for storing board states
 public class Board
 {
@@ -13,7 +14,6 @@ public class Board
 	public Board( int[] state )
 	{
 		setState( state );
-		fitness();
 	}	
 	
 	// Calculate board state cost
@@ -38,8 +38,9 @@ public class Board
 	
 	public void setState( int[] state )
 	{
-		assert( state.length == 25 ); // This should NEVER be anything other than size 25
+		// Check if state is of size 25?
 		this.state = state;
+		fitness(); // Compute fitness
 	}
 	
 	public int getFitness()
