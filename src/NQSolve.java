@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.function.Function;
 
-
 public class NQSolve 
 {
 	public static void main( String args[] )
@@ -42,7 +41,8 @@ public class NQSolve
 		System.out.print( " ]\n" );
 		
 		// Print a graphical representation of the board
-		System.out.print( " " + " - ".repeat( node.getState().length )  + "\n" );
+		//System.out.print( " " + " - ".repeat( node.getState().length )  + "\n" );
+		printBorderLine( node.getState().length );
 		for ( int i = 0; i < node.getState().length; ++i )
 		{
 			System.out.print( "|" );
@@ -54,8 +54,19 @@ public class NQSolve
 					System.out.print( " 0 " );
 			}
 			System.out.println( "|" );
-		}
-		System.out.print( " " + " - ".repeat( node.getState().length )  + "\n" );
+		}	
+		printBorderLine( node.getState().length );
+		//System.out.print( " " + " - ".repeat( node.getState().length )  + "\n" );
+	}
+	
+	// Method for printing top and bottom lines of border for the chess board
+	// Java 8 implementation since String.repeat is Java 11 dependent
+	private static void printBorderLine( int length )
+	{
+		System.out.print( " " );
+		for ( int i = 0; i < length; ++ i )
+			System.out.print( " - " );
+		System.out.print( "\n" );
 	}
 	
 	private static boolean simulatedAnnealing()
