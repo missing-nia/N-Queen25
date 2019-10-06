@@ -20,7 +20,7 @@ public class Genetic
 		for ( int i = 0; i < numGens; ++i )
 		{
 			Collections.sort( pop ); // Sort the pop
-			ArrayList<Node> newPop = new ArrayList<Node>();
+			ArrayList<Node> newPop = new ArrayList<Node>( pop.size() );
 			for ( int j = 0; j < pop.size(); ++j )
 			{
 				Node[] parents = randomSelection( pop );

@@ -87,7 +87,7 @@ public class NQSolve
 	
 	private static boolean genetic()
 	{
-		ArrayList<Node> pop = new ArrayList<Node>();
+		ArrayList<Node> pop = new ArrayList<Node>( 20 ); // pop size n = 20
 		Problem prob = new Problem();
 		
 		// Generate our pop of size n = 20
