@@ -1,3 +1,9 @@
+//=============================================================================//
+//
+// Purpose: General Simulated Annealing algorithm implementation		
+//
+//=============================================================================//
+
 import java.util.function.Function;
 
 public class SimulatedAnnealing 
