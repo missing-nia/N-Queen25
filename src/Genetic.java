@@ -74,29 +74,4 @@ public class Genetic
 		
 		return new Node( state );
 	}
-	/*
-	 * function Genetic-Algorithm(population, FITNESS-FN) returns an individual
-	 * 	inputs: population, a set of individuals
-	 * 	FITNESS-FN, a function that measures the fitness of an individual
-	 * 
-	 * 	repeat
-	 * 		new_population <-- empty set
-	 * 		loop for i from 1 to SIZE(population) do
-	 * 			x <-- RANDOM-SELECTION(population, FITNESS-FN)
-	 * 			y <-- RANDOM-SELECTION(population, FITNESS-FN)
-	 * 			child <-- REPRODUCE(x,y)
-	 * 			if(small random probability) then child <-- MUTATE(child)
-	 * 			add child to new_population
-	 * 		population <-- new_population
-	 * 	until some individual is fit enough, or enough time has elapsed
-	 * 	return the best individual in the population, according to FITNESS-FN
-	 * 
-	 * 
-	 * function REPRODUCE(x,y) returns an individual
-	 * 	inputs: x, y, parent individuals
-	 * 
-	 * 	n <-- LENGTH(x)
-	 * 	c <-- random number from 1 to n
-	 * 	return APPEND(SUBSTRING(x, 1, c), SUBSTRING(y, c + 1, n))
-	 */
 }
